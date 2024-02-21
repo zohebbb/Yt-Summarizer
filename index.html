@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Youtube Summariser</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #f4f4f4;
+            margin: 0;
+            padding: 0;
+            height: 100vh;
+            text-align: center;
+        }
+
+        .main {
+            display: flex;
+            flex-direction: column;
+            align-items: center;
+            justify-content: center;
+        }
+
+        h1 {
+            color: rgb(157, 3, 3);
+            margin-top: 150px;
+            margin-bottom: 45px;
+            font-size: 40px;
+        }
+
+        label {
+            margin-bottom: 10px;
+            font-size: 16px;
+            margin-right: 10px;
+        }
+
+        #youtubeLink {
+            width: 25%;
+            max-width: 50%;
+            padding: 8px;
+            font-size: 14px;
+            box-sizing: border-box;
+        }
+
+        #summarise {
+            background-color: #4CAF50;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin-top: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+        }
+
+        #summarise:disabled {
+            background-color: #ccc;
+            cursor: not-allowed;
+        }
+
+        #output {
+            display: none;
+            margin-top: 20px;
+            font-size: 18px;
+            width: 850px;
+            border: 1px solid black;
+            padding: 15px;
+        }
+
+        .error {
+            color: #ff0000; /* Red color for error messages */
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <h1>Youtube Summariser</h1>
+    <div class="main">
+        <label for="youtubeLink">YouTube Link:</label>
+        <input type="text" id="youtubeLink" placeholder="Enter YouTube link...">
+        <button id="summarise" type="button">Summarise</button>
+        <br>
+        <p id="output" class="error"></p>
+    </div>
+    <script src="../static/script.js"></script>
+</body>
+</html>
